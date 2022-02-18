@@ -1,3 +1,5 @@
+
+
 @font-face {
   font-family: font0;
   src: url(assets/fonts1/Nexa_Bold.otf);
@@ -123,7 +125,8 @@ main {
 }
 
 .nav-list li {
-  letter-spacing: 3px;
+  font-family: font2;
+  letter-spacing: 2px;
   margin-left: 32px;
 }
 
@@ -144,13 +147,29 @@ main {
 /*LEADS*/
 .leads{
   width: 100%;
-  height: 1000px;
+  height: fit-content;
+  padding: 0px 0px 100px 0px;
   overflow: hidden;
   background-size: cover;
   background-position: center;
   background: url(assets/images/back.png)center center/ cover no-repeat;
-  justify-content: center;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: font2;
+  font-size: 14px;
+  color: grey;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: grey;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: grey;
 }
 
 .leads_text{
@@ -162,12 +181,89 @@ main {
   text-align: center;
   color: white;
 }
+
+.form {
+  font-family: font1;
+  color: #0036a3;
+  width: 100%;
+  max-width: 32rem;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form label,
+.form input,
+.form textarea,
+.form button {
+  display: block;
+  width: 250px;
+}
+
+.form input,
+.form textarea {
+  font: inherit;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: border-color, box-shadow 0.2s;
+}
+
+.form textarea {
+  min-height: 50px;
+  resize: vertical;
+}
+
+.form input:hover,
+.form input:focus,
+.form textarea:hover,
+.form textarea:focus {
+  outline: none;
+  border-color: #09d;
+  box-shadow: 0 0 0 3px #4dc8ff;
+}
+
+.form button {
+  width: fit-content;
+  padding: 15px 10px;
+  height: 30px;
+  border-radius: 30px;
+  color: #0036a3;
+  background: var(--color-3);
+  border: none;
+  font-family: font5;
+  font-size: 14px;
+  font-weight: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.form button:hover,
+.form button:focus {
+  outline: none;
+  background: #09d;
+}
+
 #marca-texto{
   background-color: var(--color-2);
 }
+.intro_img{
+  width: 270px;
+  position: relative;
+  top: -30px; 
+  margin-bottom: 0px;
+}
 
 .intro{
-  justify-content: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: fit-content;
   background: url(assets/images/back3.png)center center/ cover no-repeat;
@@ -175,7 +271,7 @@ main {
 .intro_title{
   margin-right: auto;
   margin-left: auto;
-  padding-top: 30px;
+  padding-top: 0px;
   line-height: 25px;
   font-family: font0;
   width: 215px;
@@ -187,7 +283,7 @@ main {
   margin-top: 10px;
   margin-right: auto;
   margin-left: auto;
-  width: 310px;
+  width: 250px;
   font-family: font2;
   font-size: 0.8em;
   text-align: center;
@@ -237,7 +333,7 @@ main {
   padding-top: 30px;
   line-height: 30px;
   font-family: font1;
-  width: 350px;
+  width: 250px;
   font-size: 1.2em;
   text-align: center;
   color: var(--color-4);
@@ -274,7 +370,7 @@ main {
   margin-top: 5px;
   margin-right: auto;
   margin-left: auto;
-  width: 310px;
+  width: 250px;
   font-family: font2;
   font-size: 0.8em;
   text-align: center;
@@ -348,7 +444,7 @@ main {
   background: var(--color-5);
   width: 100%;
   height: fit-content;
-  padding: 0 0 20px 0;
+  padding: 0 0 150px 0;
 }
 
 .servicos_title{
@@ -409,6 +505,7 @@ main {
 }
 
 .telegram_div{
+  position: relative;
   width: 100%;
   height: fit-content;
   padding: 40px 0px 20px 0px;
@@ -449,6 +546,12 @@ main {
 .telegram_button p{
   margin-right: 20px;
 }
+.telegram_img{
+  position: absolute;
+  top: -120px; 
+  width: 250px;
+}
+
 
 footer{
   position: relative; 
